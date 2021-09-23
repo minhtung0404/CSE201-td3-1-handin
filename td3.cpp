@@ -106,7 +106,7 @@ void merge_telemetry(double **telemetries,
     }
 
     for (int i = 0; i < global_telemetry_current_size; i += 3) {
-        for (int j = i; j+3 < global_telemetry_current_size; j += 3) {
+        for (int j = 0; j+3 < global_telemetry_current_size; j += 3) {
             if (global_telemetry[j] > global_telemetry[j+3]) {
                 for (int k = 0; k < 3; k++){
                     std::swap(global_telemetry[j+k], global_telemetry[j+3+k]);
